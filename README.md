@@ -34,6 +34,7 @@ The assembly consists of four main functional layers:
 | `TopSpringSlider.scad` | Spring-loaded top slider variant |
 | `pyramid.scad` | Pyramid/ramp geometry for slider leading edge |
 | `key.scad` | Anti-rotation key geometry |
+| `PrintAll.scad` | Print any combination of parts on one bed; set `print_all = true` or flip individual flags |
 | `AssemblyPreview.scad` | Exploded assembly preview (all parts together) |
 
 ## Requirements

@@ -2,6 +2,12 @@
 
 A set of parametric OpenSCAD models that together form a wrist-worn assistive device, allowing individuals with quadriplegia (tetraplegia) to independently pick up and use everyday tools such as forks, knives, and other utensils.
 
+## Preview
+
+| Wrist Brace | Main Box | Top Plate |
+|:-----------:|:--------:|:---------:|
+| ![Wrist Brace](images/wristbrace.png) | ![Main Box](images/mainbox.png) | ![Top Plate](images/top.png) |
+
 ## Purpose
 
 People living with quadriplegia often have limited or no hand/finger function, making it difficult or impossible to grip tools unaided. This device provides a spring-loaded, quick-release mounting system that attaches to the wrist and holds tools securely while allowing easy release — restoring a degree of independence for feeding and other daily tasks.

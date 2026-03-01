@@ -10,6 +10,9 @@ derived/
 *.echo
 *.png
 
+# But always track README images
+!images/*.png
+
 # OS junk
 .DS_Store
 Thumbs.db

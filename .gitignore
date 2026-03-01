@@ -1,0 +1,15 @@
+# Ignore backup and work-in-progress subfolders
+backup_2_22/
+before_parameterization/
+derived/
+
+# OpenSCAD cache/exports
+*.stl
+*.amf
+*.3mf
+*.echo
+*.png
+
+# OS junk
+.DS_Store
+Thumbs.db

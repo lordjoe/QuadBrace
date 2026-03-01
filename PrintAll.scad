@@ -10,7 +10,7 @@
 // Layout: three rows
 //   Row 0 — MainBox | Top | Brace
 //   Row 1 — Holder  | Pusher
-//   Row 2 — Slider  | TopSpringSlider | Key | Pyramid
+//   Row 2 — Slider  | TopSpringSlider
 
 include <common_params.scad>;
 include <params_quadbrace.scad>;
@@ -22,8 +22,6 @@ use <holder.scad>;
 use <pusher2.scad>;
 use <Slider.scad>;
 use <TopSpringSlider.scad>;
-use <key.scad>;
-use <pyramid.scad>;
 
 // ── Selection ────────────────────────────────────────────────────────────────
 // Set print_all = true  → every part renders.
@@ -38,8 +36,6 @@ print_holder     = false;
 print_pusher     = false;
 print_slider     = false;
 print_top_slider = false;
-print_key_part   = false;
-print_pyramid    = false;
 
 // ── Spacing ──────────────────────────────────────────────────────────────────
 gap = 5;   // mm between parts on the bed
@@ -61,10 +57,6 @@ fp_slider_x    = 35;           // two sliders side-by-side
 fp_slider_y    = 15;
 fp_topslider_x = 22;
 fp_topslider_y = 15;
-fp_key_x       = 15;
-fp_key_y       = 12;
-fp_pyramid_x   = 10;
-fp_pyramid_y   = 14;
 
 // ── Part wrappers ─────────────────────────────────────────────────────────────
 // Each module renders its part.  The translate inside each wrapper brings the
@@ -118,22 +110,6 @@ module part_TopSpringSlider() {
     topSpringSlider();
 }
 
-module part_Key() {
-    key();
-}
-
-module part_Pyramid() {
-    // frustum_45 is centred in Y and Z; bring base face to origin.
-    pyr_shrink = 2 * pyr_height_x * tan(pyr_slope_deg);
-    translate([0, pyr_width_y/2, pyr_depth_z/2])
-        frustum_45(
-            pyr_height_x,
-            pyr_width_y,
-            pyr_depth_z,
-            pyr_width_y - pyr_shrink,
-            pyr_depth_z - pyr_shrink
-        );
-}
 
 // ── Layout positions ──────────────────────────────────────────────────────────
 
@@ -151,9 +127,7 @@ x_pusher = x_holder + fp_holder_x + gap;
 // Row 2 — small parts
 y_row2      = y_row1    + fp_holder_y    + gap;
 x_slider    = 0;
-x_topslider = x_slider    + fp_slider_x    + gap;
-x_key       = x_topslider + fp_topslider_x + gap;
-x_pyramid   = x_key       + fp_key_x       + gap;
+x_topslider = x_slider + fp_slider_x + gap;
 
 // ── Conditional render ────────────────────────────────────────────────────────
 module show_if(flag) { if (print_all || flag) children(); }
@@ -178,9 +152,3 @@ show_if(print_slider)
 
 show_if(print_top_slider)
     translate([x_topslider, y_row2, 0]) part_TopSpringSlider();
-
-show_if(print_key_part)
-    translate([x_key, y_row2, 0]) part_Key();
-
-show_if(print_pyramid)
-    translate([x_pyramid, y_row2, 0]) part_Pyramid();

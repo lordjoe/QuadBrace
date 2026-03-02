@@ -7,12 +7,8 @@ A set of parametric OpenSCAD models that together form a wrist-worn assistive de
 | Wrist Brace | Main Box | Top Plate |
 |:-----------:|:--------:|:---------:|
 | ![Wrist Brace](images/wristbrace.png) | ![Main Box](images/mainbox.png) | ![Top Plate](images/top.png) |
-
-### Assembly — sliders and springs
-
-![Spring assembly](images/spring_assembly.png)
-
-*Blue — Y-groove slider (wide end toward sealed wall). Green — X-groove spring slider (at closed end). Red/orange coils — the two springs per slot connecting each slider's pegs to the end-wall pegs.*
+| **Assembly — sliders and springs** — semi-transparent box; blue = Y-groove slider (wide end toward sealed wall), green = X-groove spring slider (at closed end), red/orange coils = springs from slider pegs to end-wall pegs |||
+| ![Spring assembly](images/spring_assembly.png) |||
 
 ## Purpose
 

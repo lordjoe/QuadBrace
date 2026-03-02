@@ -8,6 +8,12 @@ A set of parametric OpenSCAD models that together form a wrist-worn assistive de
 |:-----------:|:--------:|:---------:|
 | ![Wrist Brace](images/wristbrace.png) | ![Main Box](images/mainbox.png) | ![Top Plate](images/top.png) |
 
+### Assembly — sliders and springs
+
+![Spring assembly](images/spring_assembly.png)
+
+*Blue — Y-groove slider (wide end toward sealed wall). Green — X-groove spring slider (at closed end). Red/orange coils — the two springs per slot connecting each slider's pegs to the end-wall pegs.*
+
 ## Purpose
 
 People living with quadriplegia often have limited or no hand/finger function, making it difficult or impossible to grip tools unaided. This device provides a spring-loaded, quick-release mounting system that attaches to the wrist and holds tools securely while allowing easy release — restoring a degree of independence for feeding and other daily tasks.
